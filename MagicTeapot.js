@@ -15,6 +15,9 @@
 // Email:   fredpan0821@gmail.com
 // ==========================================================================
 // $Log: MagicTeapot.js,v $
+// Revision 1.1  2019/03/28 00:49:51  Liren
+// Updated sources paths.
+//
 // Revision 1.0  2019/03/27 19:21:22  Liren
 // Updated copyright.
 //
@@ -135,9 +138,9 @@ function init(){
 
 
 	//init textures
-	fernTexture = new THREE.TextureLoader().load( 'img/fern.png' );
-	fernTexture.wrapS = fernTexture.wrapT = THREE.RepeatWrapping;
-	fernTexture.anisotropy = 21;
+	teapotTexture = new THREE.TextureLoader().load( 'img/fern.png' );
+	teapotTexture.wrapS = teapotTexture.wrapT = THREE.RepeatWrapping;
+	teapotTexture.anisotropy = 21;
 	specularMap = new THREE.TextureLoader().load( 'img/fern_specular_map.png' );
 	specularMap.wrapS = specularMap.wrapT = THREE.RepeatWrapping;
 	specularMap.anisotropy = 21;
@@ -201,7 +204,7 @@ function initGUI(){
 
 		// this.showPhongShading = true;
 		this.showFlatShading = false;
-		this.showFernDecal = false;
+		this.showteapotDecal = false;
 		this.segmentNum = 10;
 
 		this.showSpecular = false;
@@ -232,7 +235,7 @@ function initGUI(){
 	teapotMaterialControl = gui.addFolder("Teapot Materials");
 	// teapotMaterialControl.add(controllers, "showPhongShading", true, false).name("Show Phong Shading").onChange(render);
 	teapotMaterialControl.add(controllers, "showFlatShading", true, false).name("Show Flat Shading").onChange(render);
-	teapotMaterialControl.add(controllers, "showFernDecal", true, false).name("Show Fern Decal").onChange(render);
+	teapotMaterialControl.add(controllers, "showteapotDecal", true, false).name("Show teapot Decal").onChange(render);
 	teapotMaterialControl.add(controllers, "segmentNum", 1, 210).name("Number of Segment").onChange(render)
 
 	teapotSpecularControl = gui.addFolder("Teapot Specular");
@@ -349,11 +352,11 @@ function render() {
 	}
 
 
-	//Fern Decal trigger
-	if (controllers.showFernDecal){
-		phongMaterial.map = fernTexture;	
+	//teapot Decal trigger
+	if (controllers.showteapotDecal){
+		phongMaterial.map = teapotTexture;	
 
-		// defaultMaterial.map = fernTexture;	
+		// defaultMaterial.map = teapotTexture;	
 	}else{
 		phongMaterial.map = null;
 
