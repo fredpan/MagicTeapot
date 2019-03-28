@@ -100,7 +100,7 @@ function init(){
 
 	//Init cube textrues
 	cubeLoader_blood_valley = new THREE.CubeTextureLoader();
-	cubeLoader_blood_valley.setPath( 'img/skybox/blood-valley/' );
+	cubeLoader_blood_valley.setPath( 'https://fredpan.github.io/MagicTeapot/img/skybox/blood-valley/' );
 	blood_valley = cubeLoader_blood_valley.load( [
 	'ft.png', 'bk.png',
 	'up.png', 'dn.png',
@@ -108,7 +108,7 @@ function init(){
 	] );
 	
 	cubeLoader_castle = new THREE.CubeTextureLoader();
-	cubeLoader_castle.setPath( 'img/skybox/castle/' );
+	cubeLoader_castle.setPath( 'https://fredpan.github.io/MagicTeapot/img/skybox/castle/' );
 	castle = cubeLoader_castle.load( [
 	'ft.png', 'bk.png',
 	'up.png', 'dn.png',
@@ -116,7 +116,7 @@ function init(){
 	] );
 
 	cubeLoader_city = new THREE.CubeTextureLoader();
-	cubeLoader_city.setPath( 'img/skybox/city/' );
+	cubeLoader_city.setPath( 'https://fredpan.github.io/MagicTeapot/img/skybox/city/' );
 	city = cubeLoader_city.load( [
 	'ft.png', 'bk.png',
 	'up.png', 'dn.png',
